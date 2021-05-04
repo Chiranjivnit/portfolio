@@ -1,0 +1,224 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Portfolio css
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+.top_header{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to left, #fff 85%, #c3f5ff 20%);
+}
+.nav {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+  font-weight: bold;
+}
+.leftlogo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: logo 2s linear infinite;
+  animation-direction: alternate;
+  color:#6c5ce7;
+  font-weight: bolder;
+  font-size: 25px;
+}
+@keyframes logo {
+  from{padding-left: 40px;}
+  to{padding-right: 40px;}
+}
+.rightMenu{
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.rightMenu a{
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  font-weight:600;
+  position: relative;
+}
+.rightMenu a:before{
+  content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 0%;
+    height: 2px;
+    background-color:#d63031;
+    transition: all 0.5s linear;
+}
+.rightMenu a:hover:before{
+  width: 105%;
+  background: #6c5ce7;
+}
+
+main{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 50px;
+}
+.leftContainer{
+  /* padding: 15px 15px 15px;
+  margin: 15px 5px ; */
+  box-sizing: border-box;
+}
+.leftContainer h3{
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.leftContainer h3::after{
+  content: "";
+  width: 300px;
+  height: 2px;
+  position: absolute;
+  top: 52%;
+  left: 24.5%;
+  background: #000;
+}
+.leftContainer h1{
+  font-size: 50px;
+  color: #000;
+}
+.leftContainer h2{
+  font-weight: 500;
+  font-size: 30px;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.content_change::after{
+  content: "";
+  animation: changeSkill 10s infinite linear;
+  color: #00cec9;
+  text-shadow: 2px 2px 2px rgb(73, 80, 77);
+  font-weight: 600;
+  font-size:30px;
+}
+@keyframes changeSkill {
+  15%{content: "MongoDB";}
+  20%{content: "Express js";}
+  40%{content: "React js";}
+  60%{content: "Node js";}
+  80%{content: "HTML5";}
+  100%{content: "CSS3";}
+}
+.leftContainer .button1, .button2{
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  /* margin-right: 25px; */
+  
+}
+.button1{
+  padding: 10px 5px;
+  /* margin-right: 25px; */
+  color: #fff;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+  box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+}
+.button1:hover{
+  border: 1px solid #4458dc;
+  color: #222;
+  background-color:#fff;
+  box-shadow: none;
+  background-image: none;
+  transition: all 0.5s ease;
+}
+.button2{
+ border: 1px solid #4458dc;
+  color: #222;
+  background-color:#fff;
+  box-shadow: none;
+  padding: 8px 15px;
+  margin-left: 25px;
+ 
+}
+.button2:hover{
+  color: #fff;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+  box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+  transition: all 0.5s ease;
+}
+.rightContainer{
+  border-radius: 80% 70% 70% 5% / 50% 100% 50% 90%  ;
+  background: #e8fbff;
+}
+.rightContainer img{
+  max-width: 500px;
+  height: auto;
+  margin-top: 20px;
+}
+
