@@ -1,23 +1,15 @@
 import React from "react";
 import "../App.css";
-import fullstack from '../image/fullstack.png'
+import fullstack from '../image/fullstack.png';
+import NavBar from './NavBar';
 
 function Portfolio() {
+
   return (
     <>
       <header className="top_header">
         <section>
-          <nav className="nav">
-            <div className="leftlogo">
-              <h1>Chiranjib Rout</h1>
-            </div>
-            <div className="rightMenu">
-              <a >Home</a>
-              <a href="https://github.com/Chiranjivnit?tab=repositories" target="_blank">Projects</a>
-              <a>About</a>
-              <a>Contact</a>
-            </div>
-          </nav>
+          <NavBar/>
         </section>
         <main>
           <div className="leftContainer">
@@ -28,7 +20,7 @@ function Portfolio() {
             <a href="https://www.linkedin.com/in/chiranjiv-rout-904662139/" target="_blank" className="button2" >Linkedin</a>
           </div>
           <div className="rightContainer">
-            <img src={fullstack} ></img>
+            <img alt="fullstack" src={fullstack} ></img>
           </div>
         </main>
       </header>
