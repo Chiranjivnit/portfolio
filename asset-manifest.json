@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.4bfa2c07.chunk.css",
+    "main.js": "/portfolio/static/js/main.1070a93c.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.1070a93c.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.7b3663b8.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.7b3663b8.js.map",
+    "static/js/2.b4ec782b.chunk.js": "/portfolio/static/js/2.b4ec782b.chunk.js",
+    "static/js/2.b4ec782b.chunk.js.map": "/portfolio/static/js/2.b4ec782b.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.575c8001dc8b34c72f64e49c11c4ab50.js": "/portfolio/precache-manifest.575c8001dc8b34c72f64e49c11c4ab50.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.4bfa2c07.chunk.css.map": "/portfolio/static/css/main.4bfa2c07.chunk.css.map",
+    "static/js/2.b4ec782b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.b4ec782b.chunk.js.LICENSE.txt",
+    "static/media/ChiranjivResume.pdf": "/portfolio/static/media/ChiranjivResume.490957d8.pdf",
+    "static/media/fullstack.png": "/portfolio/static/media/fullstack.e28604a0.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b3663b8.js",
+    "static/js/2.b4ec782b.chunk.js",
+    "static/css/main.4bfa2c07.chunk.css",
+    "static/js/main.1070a93c.chunk.js"
+  ]
+}
