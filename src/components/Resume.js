@@ -1,39 +1,53 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from './NavBar';
-import { Document, Page } from 'react-pdf';
-import Resume from '../doc/ChiranjivResume.pdf';
 import { useLocation } from 'react-router-dom';
+import { Viewer } from '@react-pdf-viewer/core'; // install this library
+// Plugins
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout'; // install this library
+// Import the styles
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
+// Worker
+import { Worker } from '@react-pdf-viewer/core'; // install this library
+import pdfFile from '../doc/Chiranjiv Resume.pdf'
+//import pdfFile from '../../public/Chiranjiv Resume.pdf';
 
 function ResumeViewer() {
     let location = useLocation()
-console.log('location',location)
-    const [numpages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
+    console.log('location', location)
     const [aboutPage, setAboutPage] = useState(false);
+    const [viewPdf, setViewPdf] = useState(null);
 
-    const onDocumentLoadSuccess = ({ pages }) => {
-        setNumPages(pages);
-    }
+    // Create new plugin instance
+    const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
     useEffect(() => {
         setAboutPage(true);
+        handlePdfFileSubmit();
     }, [])
+
+    // form submit
+    const handlePdfFileSubmit = (e) => {
+        //e.preventDefault();
+        if (pdfFile !== null) {
+            setViewPdf(pdfFile);
+        }
+        else {
+            setViewPdf(null);
+        }
+    }
 
     return (
         <>
-          
-            <NavBar aboutPage={aboutPage}/>
-                
+
+            <NavBar aboutPage={aboutPage} />
+
             <div className="pdfViewer">
-                <Document
-                    file={Resume}
-                    options={{ workerSrc: "/pdf.worker.js" }}
-                    onLoadSuccess={onDocumentLoadSuccess}
-                >
-                    <Page pageNumber={pageNumber} />
-                </Document>
+                {viewPdf ? <><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
+                    <Viewer fileUrl={viewPdf}
+                        plugins={[defaultLayoutPluginInstance]} />
+                </Worker></>:<p>pdf file not found</p>}
             </div>
-            {/* <p>page{pageNumber} of {numpages}</p> */}
         </>
     )
 }
