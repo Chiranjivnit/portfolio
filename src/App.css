@@ -306,3 +306,231 @@ main{
 }
 
 
+/*
+ media query
+*/
+@media screen and (max-width:1024px) and (min-width:0px) {
+  main{
+    margin-right: 0px;
+    margin-left:10px;
+  }
+  .leftlogo {
+    width: 50%;
+    font-size: 45px;
+  }
+  .rightMenu{
+    width: 50%;
+  }
+  .rightMenu a{
+    font-size: 40px;
+    font-weight:900;
+  }
+  .rightContainer img{
+    max-width: 550px; 
+  }
+  .leftContainer h3{
+    font-size: 50px;
+  }
+  .leftContainer h3::after{
+    content: "";
+    width: 270px;
+    left: 30%;
+  }
+  .leftContainer h2{
+    font-weight: 900;
+    font-size: 37px;
+    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .content_change::after{
+    content: "";
+    animation: changeSkill 10s infinite linear;
+    color: #00cec9;
+    text-shadow: 2px 2px 2px rgb(73, 80, 77);
+    font-weight: 600;
+    font-size:30px;
+  }
+  .leftContainer .button1, .button2{
+    font-size: 30px;  
+  }
+  .button1{
+    padding: 16px 18px;
+  }
+  .button1:hover{
+  }
+  .button2{
+    padding: 13px 25px;
+    margin-left: 50px;
+  }
+  .button2:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.5s ease;
+  }
+}
+
+@media screen and (max-width:768px) and (min-width:0px) {
+  main{
+    margin-right: 10px;
+    margin-left:10px;
+  }
+  .leftlogo {
+    width: 50%;
+    font-size: 35px;
+  }
+  .rightMenu{
+    width: 50%;
+  }
+  .rightMenu a{
+    font-size: 30px;
+    font-weight:900;
+  }
+  .rightContainer img{
+    max-width: 450px; 
+  }
+  .leftContainer h3{
+    font-size: 40px;
+  }
+  .leftContainer h3::after{
+    content: "";
+    width: 185px;
+    left: 31%;
+  }
+  .leftContainer .button1, .button2{
+    font-size: 20px;
+  }
+  .button1{
+    padding: 18px 8px;
+  }
+  .button1:hover{
+  }
+  .button2{
+    padding: 15px 15px;
+    margin-left: 50px;
+  }
+  .button2:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.5s ease;
+  }
+}
+@media screen and (max-width:375px) and (min-width:0px) {
+  main{
+    display: block;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .toggleBtn{
+    display:block;
+    width:30px;
+    position:absolute;
+    right:25px;
+    top:30px;
+  }
+  .toggleBtn span {
+    display:inline-block;
+    width:100%;
+    height:2px;
+    float:left;
+    background-color: #000;
+  }
+  .nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+  }
+  .top_header{
+    margin-top: 60px;
+    position: fixed;
+  }
+  .leftlogo {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: logo 2s linear infinite;
+    animation-direction: alternate;
+    color:#6c5ce7;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  @keyframes logo {
+    from{padding-left: 10px;}
+    to{padding-right: 10px;}
+  }
+  .rightMenu{
+    width: 20%;
+    display:none;
+  }
+  .rightMenu a{
+    font-size: 10px;
+    font-weight:900;
+  }
+  .rightContainer img{
+    max-width: 360px; 
+    margin-top: 80px;
+    text-align: center;
+  }
+  .leftContainer{
+    margin-top: 40px;
+  }
+ 
+  .leftContainer h1{
+    font-size: 20px;
+  }
+  .leftContainer h2{
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .leftContainer h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    margin-top: 50px;
+  }
+  .leftContainer h3::after{
+    content: "";
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 52%;
+    left: 14%;
+    background: #000;
+  }
+  .leftContainer .button1, .button2{
+    font-size: 16px;
+  }
+  .rightContainer{
+    border-radius: 30% 40% 40% 30% / 30% 30% 90% 70%  ;
+    background: #e8fbff;
+  }
+  .button1{
+    padding: 8px 5px;
+  }
+  .button1:hover{
+  }
+  .button2{
+    padding: 7px 8px;
+    margin-left: 20px;
+  }
+  .button2:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.5s ease;
+  }
+}
+
+
