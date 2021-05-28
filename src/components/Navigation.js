@@ -9,7 +9,7 @@ function Navigation({ aboutPage, contactPage, handleToggleNavBar, toggleNavBar,r
         <NavLink className={aboutPage || contactPage ? "" : "home"} to="/">
           <a>Home</a>
         </NavLink>
-        <a
+        <a className="project"
           href="https://github.com/Chiranjivnit?tab=repositories"
           target="_blank"
         >

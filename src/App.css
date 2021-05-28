@@ -44,9 +44,9 @@
   to{padding-right: 40px;}
 }
 .rightMenu{
-  width: 30%;
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .rightMenu a{
@@ -55,6 +55,7 @@
   color: #000;
   font-weight:600;
   position: relative;
+  margin:10px 10px 10px 10px
 }
 .rightMenu a:before{
   content: "";
@@ -67,10 +68,20 @@
     transition: all 0.5s linear;
 }
 .rightMenu a:hover:before{
-  width: 105%;
+  width: 100%;
   background: #6c5ce7;
 }
 .home a::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  height: 2px;
+  background-color:#00b894;
+  transition: all 0.5s linear;
+}
+.project::before{
   content: "";
   position: absolute;
   top: 100%;
@@ -206,37 +217,6 @@ main{
   background-color: #636e72;
 }
 
-/* For pdf */
-.react-pdf__Page {
-  margin-top: 0px;
-  background-color: #636e72;
-}
-.react-pdf__Page__textContent {
-  border: 1px solid darkgrey;
-  box-shadow: 3px 3px 3px 1px #ccc;
-  border-radius: 5px;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-.react-pdf__Page__annotations.annotationLayer {
-  
-}
-
-.react-pdf__Page__canvas {
-  margin: 0 auto;
-  width: 100% !important;
-  height: 100% !important;
-}
-.react-pdf__Page__annotations .annotationLayer section{
-  height: 0% !important;
-}
-
-.linkAnnotation{
-  height: 0% !important;
-}
-
-
 /*
  media query
 */
@@ -254,14 +234,35 @@ main{
   }
   .leftlogo {
     width: 50%;
-    font-size: 45px;
+    font-size: 40px;
   }
   .rightMenu{
     width: 50%;
   }
   .rightMenu a{
-    font-size: 40px;
+    font-size: 28px;
     font-weight:900;
+    padding: 15px;
+  }
+  .home a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background-color:#00b894;
+    transition: all 0.5s linear;
+  }
+  .about a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background-color:#00b894;
+    transition: all 0.5s linear;
   }
   .rightContainer img{
     max-width: 550px; 
@@ -276,10 +277,10 @@ main{
   }
   .leftContainer h2{
     font-weight: 900;
-    font-size: 37px;
+    font-size: 30px;
     color: #000;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   .content_change::after{
     content: "";
@@ -290,7 +291,7 @@ main{
     font-size:30px;
   }
   .leftContainer .button1, .button2{
-    font-size: 30px;  
+    font-size: 28px;  
   }
   .button1{
     padding: 16px 18px;
@@ -306,6 +307,9 @@ main{
     background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
     box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
     transition: all 0.5s ease;
+  }
+  .pdfViewer{
+    margin: 140px 20px 20px 0px;
   }
 }
 
@@ -323,34 +327,43 @@ main{
   }
   .leftlogo {
     width: 50%;
-    font-size: 35px;
+    font-size: 29px;
   }
   .rightMenu{
     width: 50%;
     
   }
   .rightMenu a{
-    font-size: 30px;
+    font-size: 22px;
     font-weight:900;
+    padding:5px
   }
   .rightContainer img{
     max-width: 450px; 
   }
   .leftContainer h3{
-    font-size: 40px;
+    font-size: 35px;
   }
   .leftContainer h3::after{
     content: "";
     width: 185px;
     left: 31%;
   }
+  .leftContainer h2{
+    font-size: 18px;
+    margin-bottom: 35px;
+  }
+  .leftContainer h1{
+    font-size: 34px;
+  }
+  .content_change::after{
+    font-size:22px;
+  }
   .leftContainer .button1, .button2{
-    font-size: 20px;
+    font-size: 17px;
   }
   .button1{
     padding: 18px 8px;
-  }
-  .button1:hover{
   }
   .button2{
     padding: 15px 15px;
@@ -549,6 +562,7 @@ main{
     margin: 10px;
     color: whitesmoke;
     text-decoration: none;
+    padding:0px;
   }
   .rightMenuResumeView{
     width: 50%;
@@ -565,7 +579,7 @@ main{
   .rightMenuResumeView a{
     font-size: 10px;
     font-weight:900;
-    margin: 10px;
+    margin: 9px;
     color: whitesmoke;
     text-decoration: none;
   }
@@ -600,8 +614,8 @@ main{
   .leftContainer h2{
     font-weight: 900;
     font-size: 18px;
-    margin-top: 0px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 25px;
   }
   .toggleNavBar{
     display:flex;

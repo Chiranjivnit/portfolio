@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import "../App.css";
 import fullstack from '../image/fullstack.png';
 import NavBar from './NavBar';
@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 
 function Portfolio() {
 
-  const [toggleNavBar, setToggleNavBar]=useState(false)
+  const [toggleNavBar, setToggleNavBar]=useState(false);
 
   const handleToggleNavBar=()=>{
     setToggleNavBar(!toggleNavBar);
