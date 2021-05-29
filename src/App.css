@@ -55,7 +55,7 @@
   color: #000;
   font-weight:600;
   position: relative;
-  margin:10px 10px 10px 10px
+  margin:10px
 }
 .rightMenu a:before{
   content: "";
@@ -81,7 +81,16 @@
   background-color:#00b894;
   transition: all 0.5s linear;
 }
-.project::before{
+.rightMenu .project {
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
+  font-weight:900;
+  position: relative;
+  margin:10px;
+  margin-top: 30px;
+}
+.project a::before{
   content: "";
   position: absolute;
   top: 100%;
@@ -254,6 +263,15 @@ main{
     background-color:#00b894;
     transition: all 0.5s linear;
   }
+  .rightMenu .project {
+    font-size: 28px;
+    text-decoration: none;
+    color: #000;
+    font-weight:900;
+    position: relative;
+    margin:10px;
+    margin-top: 40px;
+  }
   .about a::before{
     content: "";
     position: absolute;
@@ -338,6 +356,15 @@ main{
     font-weight:900;
     padding:5px
   }
+  .rightMenu .project {
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+    font-weight:900;
+    position: relative;
+    margin:10px;
+    margin-top: 35px;
+  }
   .rightContainer img{
     max-width: 450px; 
   }
@@ -376,13 +403,12 @@ main{
     transition: all 0.5s ease;
   }
 }
-@media screen and (max-width:375px) and (min-width:0px) {
+@media screen and (max-width:360px) and (min-width:0px) {
   main{
     display: block;
     align-items: center;
     margin-right: 0px;
-  }
-  
+  } 
   .nav {
     width: 100%;
     height: 10vh;
@@ -408,7 +434,7 @@ main{
     animation-direction: alternate;
     color:#6c5ce7;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 18px;
   }
   @keyframes logo {
     from{padding-left: 10px;}
@@ -418,8 +444,8 @@ main{
     display:block;
     width: 45px;
     position:absolute;
-    right:25px;
-    top:20px;
+    right:20px;
+    top:10px;
   }
   .toggleBtn span{
     display:inline-block;
@@ -427,13 +453,57 @@ main{
     height:2px;
     background-color: #000;
   }
+  .navigation{
+    display:none;
+  }
   .rightMenu{
     width: 20%;
-    display:none;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: -23px;
   }
   .rightMenu a{
     font-size: 10px;
     font-weight:900;
+    margin: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    padding:0px;
+  }
+  .rightMenu .project {
+    font-size: 12px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 900;
+    position: relative;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .rightMenuResumeView{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 52px;
+  }
+  .rightMenuResumeView a{
+    font-size: 10px;
+    font-weight:900;
+    margin: 9px;
+    color: whitesmoke;
+    text-decoration: none;
   }
   .rightContainer img{
     max-width: 360px; 
@@ -442,8 +512,21 @@ main{
   }
   .leftContainer{
     margin-top: 40px;
+    display:flex;
+    justify-content: space-between;
   }
- 
+  .toggleNavBar{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:100px;
+    background:#00b894;
+    
+  }
+ .toggleNavBar a{
+   display:flex;
+ }
   .leftContainer h1{
     font-size: 20px;
   }
@@ -457,15 +540,15 @@ main{
     font-size: 20px;
     margin-bottom: 0px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .leftContainer h3::after{
     content: "";
     width: 100px;
-    height: 2px;
+    height: 1px;
     position: absolute;
     top: 52%;
-    left: 14%;
+    left: 20%;
     background: #000;
   }
   .leftContainer .button1, .button2{
@@ -489,6 +572,20 @@ main{
     background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
     box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
     transition: all 0.5s ease;
+  }
+  .pdfViewer{
+    margin: 70px 20px 20px 0px;
+  }
+  .toggleResumePdfViewer{
+      font-family: sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      height: 80%;
+      text-align: center;
+      margin: 10px 20px 20px 0px;
+      background-color: #636e72;
   }
 }
 @media only screen and (min-width: 414px) and (max-width: 767px) {
@@ -564,6 +661,16 @@ main{
     text-decoration: none;
     padding:0px;
   }
+  .rightMenu .project {
+    font-size: 12px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 900;
+    position: relative;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
   .rightMenuResumeView{
     width: 50%;
     height: 15%;
@@ -616,6 +723,22 @@ main{
     font-size: 18px;
     margin-top: 5px;
     margin-bottom: 25px;
+  }
+  .content_change::after{
+    content: "";
+    animation: changeSkill 10s infinite linear;
+    color: #00cec9;
+    text-shadow: 2px 2px 2px rgb(73, 80, 77);
+    font-weight: 600;
+    font-size:20px;
+  }
+  @keyframes changeSkill {
+    15%{content: "MongoDB";}
+    20%{content: "Express js";}
+    40%{content: "React js";}
+    60%{content: "Node js";}
+    80%{content: "HTML5";}
+    100%{content: "CSS3";}
   }
   .toggleNavBar{
     display:flex;
