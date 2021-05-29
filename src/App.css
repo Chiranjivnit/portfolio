@@ -74,9 +74,9 @@
 .home a::before{
   content: "";
   position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 100%;
+  top: 96%;
+  left: -23%;
+  width: 120%;
   height: 2px;
   background-color:#00b894;
   transition: all 0.5s linear;
@@ -156,6 +156,7 @@ main{
 @keyframes changeSkill {
   15%{content: "MongoDB";}
   20%{content: "Express js";}
+  30%{content:"Javascript"}
   40%{content: "React js";}
   60%{content: "Node js";}
   80%{content: "HTML5";}
@@ -256,8 +257,8 @@ main{
   .home a::before{
     content: "";
     position: absolute;
-    top: 100%;
-    left: 0%;
+    top: 81%;
+    left: -14%;
     width: 100%;
     height: 2px;
     background-color:#00b894;
@@ -588,7 +589,7 @@ main{
       background-color: #636e72;
   }
 }
-@media only screen and (min-width: 414px) and (max-width: 767px) {
+@media screen and (min-width: 414px) and (max-width: 767px) {
   main{
     display: block;
     align-items: center;
@@ -735,7 +736,425 @@ main{
   @keyframes changeSkill {
     15%{content: "MongoDB";}
     20%{content: "Express js";}
+    30%{content:"Javascript"}
     40%{content: "React js";}
+    60%{content: "Node js";}
+    80%{content: "HTML5";}
+    100%{content: "CSS3";}
+  }
+  .toggleNavBar{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:100px;
+    background:#00b894;
+    
+  }
+ .toggleNavBar a{
+   display:flex;
+ }
+  .leftContainer .button1, .button2{
+    font-size: 16px;
+  }
+  .rightContainer{
+    border-radius: 30% 40% 40% 30% / 30% 30% 90% 70%  ;
+    background: #e8fbff;
+  }
+  .button1{
+    padding: 8px 5px;
+  }
+  .button1:hover{
+  }
+  .button2{
+    padding: 7px 8px;
+    margin-left: 20px;
+  }
+  .button2:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.5s ease;
+  }
+  .pdfViewer{
+    margin: 80px 20px 20px 0px;
+  }
+  .toggleResumePdfViewer{
+      font-family: sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      height: 80%;
+      text-align: center;
+      margin: 10px 20px 20px 0px;
+      background-color: #636e72;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  main{
+    display: block;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .toggleBtn{
+    display:block;
+    width: 50px;
+    position:absolute;
+    right:20px;
+    top:10px;
+  }
+  .toggleBtn span{
+    display:inline-block;
+    width:100%;
+    height:2px;
+    background-color: #000;
+  }
+  .nav {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+  }
+  .top_header{
+    margin-top: 60px;
+    position: fixed;
+  }
+  .leftlogo {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: logo 2s linear infinite;
+    animation-direction: alternate;
+    color:#6c5ce7;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  @keyframes logo {
+    from{padding-left: 10px;}
+    to{padding-right: 10px;}
+  }
+  .navigation{
+    display:none;
+  }
+  .rightMenu{
+    width: 20%;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: -17px;
+  }
+  .rightMenu a{
+    font-size: 10px;
+    font-weight:900;
+    margin: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    padding:0px;
+  }
+  .rightMenu .project {
+    font-size: 12px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 900;
+    position: relative;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .rightMenuResumeView{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 70px;
+  }
+  .rightMenuResumeView a{
+    font-size: 10px;
+    font-weight:900;
+    margin: 9px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .rightContainer img{
+    max-width: 300px; 
+    margin-top: 80px;
+    text-align: center;
+  }
+  .leftContainer{
+    margin-top: 40px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .leftContainer h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    margin-top: 50px;
+  }
+  .leftContainer h3::after{
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 52%;
+    left: 23%;
+    background: #000;
+  }
+ 
+  .leftContainer h1{
+    font-size: 20px;
+  }
+  .leftContainer h2{
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  .content_change::after{
+    content: "";
+    animation: changeSkill 10s infinite linear;
+    color: #00cec9;
+    text-shadow: 2px 2px 2px rgb(73, 80, 77);
+    font-weight: 600;
+    font-size:20px;
+  }
+  @keyframes changeSkill {
+    15%{content: "MongoDB";}
+    20%{content: "Express js";}
+    30%{content:"Javascript"}
+    40%{content: "React js";}
+    60%{content: "Node js";}
+    80%{content: "HTML5";}
+    100%{content: "CSS3";}
+  }
+  .toggleNavBar{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:100px;
+    background:#00b894;
+    
+  }
+ .toggleNavBar a{
+   display:flex;
+ }
+  .leftContainer .button1, .button2{
+    font-size: 16px;
+  }
+  .rightContainer{
+    border-radius: 30% 40% 40% 30% / 30% 30% 90% 70%  ;
+    background: #e8fbff;
+  }
+  .button1{
+    padding: 8px 5px;
+  }
+  .button1:hover{
+  }
+  .button2{
+    padding: 7px 8px;
+    margin-left: 20px;
+  }
+  .button2:hover{
+    color: #fff;
+    background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%);
+    box-shadow: 0 10px 30px rgba(118, 85, 225, 0.3);
+    transition: all 0.5s ease;
+  }
+  .pdfViewer{
+    margin: 80px 20px 20px 0px;
+  }
+  .toggleResumePdfViewer{
+      font-family: sans-serif;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      height: 80%;
+      text-align: center;
+      margin: 10px 20px 20px 0px;
+      background-color: #636e72;
+  }
+
+}
+@media screen and (max-width: 320px) {
+  main{
+    display: block;
+    align-items: center;
+    margin-right: 0px;
+  }
+  .toggleBtn{
+    display:block;
+    width: 50px;
+    position:absolute;
+    right:15px;
+    top:10px;
+  }
+  .toggleBtn span{
+    display:inline-block;
+    width:100%;
+    height:2px;
+    background-color: #000;
+  }
+  .nav {
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+    font-weight: bold;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+  }
+  .top_header{
+    margin-top: 60px;
+    position: fixed;
+  }
+  .leftlogo {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    animation: logo 2s linear infinite;
+    animation-direction: alternate;
+    color:#6c5ce7;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  @keyframes logo {
+    from{padding-left: 10px;}
+    to{padding-right: 10px;}
+  }
+  .navigation{
+    display:none;
+  }
+  .rightMenu{
+    width: 20%;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: -23px;
+  }
+  .rightMenu a{
+    font-size: 10px;
+    font-weight:900;
+    margin: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+    padding:0px;
+  }
+  .home a::before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -60%;
+    width: 160%;
+    height: 2px;
+    background-color:#00b894;
+    transition: all 0.5s linear;
+  }
+  .rightMenu .project {
+    font-size: 12px;
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 900;
+    position: relative;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .rightMenuResumeView{
+    width: 50%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: midnightblue;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top: 70px;
+  }
+  .rightMenuResumeView a{
+    font-size: 10px;
+    font-weight:900;
+    margin: 9px;
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  .rightContainer img{
+    max-width: 300px; 
+    margin-top: 80px;
+    text-align: center;
+  }
+  .leftContainer{
+    margin-top: 30px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .leftContainer h3{
+    font-size: 20px;
+    margin-bottom: 0px;
+    position: relative;
+    margin-top: 50px;
+  }
+  .leftContainer h3::after{
+    width: 100px;
+    height: 2px;
+    position: absolute;
+    top: 52%;
+    left: 23%;
+    background: #000;
+  }
+ 
+  .leftContainer h1{
+    font-size: 20px;
+  }
+  .leftContainer h2{
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  .content_change::after{
+    content: "";
+    animation: changeSkill 10s infinite linear;
+    color: #00cec9;
+    text-shadow: 2px 2px 2px rgb(73, 80, 77);
+    font-weight: 600;
+    font-size:18px;
+  }
+  @keyframes changeSkill {
+    15%{content: "MongoDB";}
+    20%{content: "Express";}
+    30%{content:"Javascript"}
+    40%{content: "React";}
     60%{content: "Node js";}
     80%{content: "HTML5";}
     100%{content: "CSS3";}
